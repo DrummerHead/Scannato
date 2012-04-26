@@ -1,129 +1,116 @@
 html,
 body {
-	margin:0;
-	padding:0;
+  margin: 0;
+  padding: 0;
 }
 body {
-	font-size:87.5%;
+  font-size: 87.5%;
 }
 #wrap {
-	font-family:Arial, Helvetica, sans-serif;
-	min-height:1250px;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 1250px;
 }
 
-#formh {
-	background-color:#eee;
-	padding:3px 0;
-	box-shadow: 0 0 17px rgba(0, 0, 0, 0.3);
+#doer {
+  background-color: #eee;
+  padding: 3px 0;
+  box-shadow:  0 0 17px rgba(0, 0, 0, 0.3);
 }
 .vessel {
-	width:600px;
-	margin:0 auto;
-	position:relative;
+  width: 600px;
+  margin: 0 auto;
+  position: relative;
 }
-.row {
-	margin:1px 0 0 0;
-	height:22px;
+#doer ol {
+  padding:  0;
+  margin:  0;
+  list-style-type:  none;
+}
+#doer li {
+  margin: 4px 0 0 0;
 }
 label {
-	display:inline-block;
-	text-align:right;
-	width:110px;
-	padding:0 5px 0 0; 
+  display: inline-block;
+  text-align: right;
+  width: 110px;
+  padding: 0 5px 0 0; 
 }
-.row input {
-	border:1px solid #aaa;
-	width:77px;
+#doer input {
+  width: 77px;
+  height: 18px;
+  border: 1px solid #aaa;
 }
 input#url {
-	width:450px;
+  width: 450px;
 }
-#doit {
-	position:absolute;
-	width:367px;
-	height:89px;
-	padding:0;
-	margin:0;
-	line-height:87px;
-	text-align:center;
-	border:1px solid #ccc;
-	font-size:2em;
-	color:#999;
-	top:23px;
-	left:202px;
-	cursor:pointer;
-	background-color:#f4f4f4;
+input#doit {
+  width: 368px;
+  height: 100px;
+  line-height: 100px;
+  position: absolute;
+  top: 26px;
+  left: 202px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  font-size: 2em;
+  text-align: center;
+  color: #999;
+  cursor: pointer;
+  background-color: #f4f4f4;
 }
 #doit:hover {
-	background-color:#f7f7f7;
-	color:#333;
+  background-color: #f7f7f7;
+  color: #333;
 }
 
 #womb {
-	margin:0;
-	padding:20px;
+  margin: 0;
+  padding: 20px;
 }
 
 a {
-	border:0;
+  border: 0;
 }
 a:visited img {
-	outline:5px solid pink;
+  outline: 5px solid pink;
 }
-li {
-	float:left;
-	padding:0 1em 3em 0;
-	list-style:none;
-	height:200px;
-	width:200px;
-	position:relative;
+#womb li {
+  float: left;
+  padding: 0 1em 3em 0;
+  list-style: none;
+  height: 200px;
+  width: 200px;
+  position: relative;
 }
-li a {
-	display:inline-block;
+#womb li a {
+  display: inline-block;
 }
-li img {
-	display:block;
-	max-width:200px;
-	max-height:200px;
-	border:0;
-	font-size:3em;
-	color:#c8c8ff;
+#womb li img {
+  display: block;
+  max-width: 200px;
+  max-height: 200px;
+  border: 0;
+  font-size: 3em;
+  color: #c8c8ff;
 }
 .imgHover {
-	outline:none;
-	width:auto;
-	max-width:none;
-	height:auto;
-	max-height:none;
-	position:absolute;
-	top:0;
-	left:0;
-	z-index:7;
-	-moz-box-shadow:0 0 10px #808080;
-	-webkit-box-shadow:0 0 10px #808080;
-	box-shadow:0 0 10px #808080;
+  outline: none;
+  width: auto;
+  max-width: none;
+  height: auto;
+  max-height: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 7;
+  -moz-box-shadow: 0 0 10px #808080;
+  -webkit-box-shadow: 0 0 10px #808080;
+  box-shadow: 0 0 10px #808080;
 }
-/*li img:hover {
-	outline:none;
-	width:auto;
-	max-width:none;
-	height:auto;
-	max-height:none;
-	position:absolute;
-	top:0;
-	left:0;
-	z-index:7;
-	-moz-box-shadow:0 0 5px #808080;
-	-webkit-box-shadow:0 0 5px #808080;
-	box-shadow:0 0 5px #808080;
-}
-li.final img:hover {
-	left:auto;
-	right:0;
-}*/
-a:visited img:hover {
-	display:block;
-	max-width:200px;
-	max-height:200px;
-	border:0;
+a:visited img: hover {
+  display: block;
+  max-width: 200px;
+  max-height: 200px;
+  border: 0;
 }

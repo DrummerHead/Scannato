@@ -5,10 +5,10 @@
 <title>scanatto &#183; mcdlr</title>
 
 <meta charset="utf-8">
-<meta name="description" content="Scannato is the name of this dynamic jQuery gallery. It works by generating links to images who's name follow a numeric progression." />
-<meta name="author" content="DrummerHead" />
+<meta name="description" content="Scannato is the name of this dynamic jQuery gallery. It works by generating links to images who&#8217;s name follow a numeric progression.">
+<meta name="author" content="DrummerHead">
 
-<link type="text/css" rel="stylesheet" href="css/style.css" />
+<link type="text/css" rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="../css/promiscuous.css?1">
 <link rel='image_src' href='http://mcdlr.com/img/thumbs/gal.png'>
 
@@ -29,89 +29,48 @@
 </header>
 
 <div id="wrap">
-  <div id="formh">
-    <form action="" id="doer">
+  <form id="doer">
     <div class="vessel">
-    <div class="row">
-      <label for="url">url:</label>
-      <input type="text" id="url" />
+      <ol>
+        <li>
+          <label for="url">url:</label>
+          <input type="text" id="url" />
+        </li>
+        <li>
+          <label for="start">starting n&deg;:</label>
+          <input type="text" id="start" />
+        </li>
+        <li>
+          <label for="end">ending n&deg;:</label>
+          <input type="text" id="end" />
+        </li>
+        <li>
+          <label for="padding">padding zeroes:</label>
+          <input type="text" id="padding" />
+        </li>
+        <li>
+          <label for="format">format;:</label>
+          <input type="text" id="format" value=".jpg" />
+        </li>
+      </ol>
+      <input type="submit" value="do it" id="doit" />
     </div>
-    <div class="row">
-      <label for="start">starting n&deg;:</label>
-      <input type="text" id="start" />
-    </div>
-    <div class="row">
-      <label for="end">ending n&deg;:</label>
-      <input type="text" id="end" />
-    </div>
-    <div class="row">
-      <label for="padding">padding zeroes:</label>
-      <input type="text" id="padding" />
-    </div>
-    <div class="row">
-      <label for="format">format;:</label>
-      <input type="text" id="format" value=".jpg" />
-    </div>
-    <!--<span id="doit">do it</span>-->
-    <input type="submit" value="do it" id="doit" />
-    </div>
-    </form>
-  </div>
+  </form>
   <ul id="womb">
     <li></li>
   </ul>
-<!-- Get a good look! Perritassss! -->
-<!--
-  <ul>
-    <li>
-      <a href="img/001.jpg">
-        <img src="img/001.jpg" alt="001" />
-      </a>
-    </li>
-    <li>
-      <a href="img/002.jpg">
-        <img src="img/002.jpg" alt="002" />
-      </a>
-    </li>
-    <li>
-      <a href="img/003.jpg">
-        <img src="img/003.jpg" alt="003" />
-      </a>
-    </li>
-    <li>
-      <a href="img/004.jpg">
-        <img src="img/004.jpg" alt="004" />
-      </a>
-    </li>
-    <li>
-      <a href="img/005.jpg">
-        <img src="img/005.jpg" alt="005" />
-      </a>
-    </li>
-    <li>
-      <a href="img/006.jpg">
-        <img src="img/006.jpg" alt="006" />
-      </a>
-    </li>
-    <li>
-      <a href="img/007.jpg">
-        <img src="img/007.jpg" alt="007" />
-      </a>
-    </li>
-  </ul>
--->
 </div>
 
 <!-- Google analytics -->
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+<script>
+var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-1030009-5']); _gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
 </script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-1030009-5");
-pageTracker._trackPageview();
-} catch(err) {}</script>
 <!-- /Google analytics -->
+
 </body>
 </html>
