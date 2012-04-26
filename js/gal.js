@@ -12,12 +12,24 @@ var $doer = $('#doer')
 $doer.submit(function(e) {
   e.preventDefault();
   var url = $('#url').val()
-    , start = $('#start').val()
-    , end = $('#end').val()
+    , start = parseInt($('#start').val())
+    , end = parseInt($('#end').val())
     , format = $('#format').val()
-    , padding = $('#padding').val()
+    , padding = parseInt($('#padding').val())
+    , eTotal = end - start
+    , isOk = true;
 
-  generate(url, start, end, format, padding);
+  if (eTotal < 0){
+    alert('Ending number must be higher than starting number, mate!');
+  }
+  else if (eTotal > 100){
+    isOk =  confirm('Your browser may get really slow if you render so many images. Continue anyway?');
+  }
+
+  if (isOk){
+    generate(url, start, end, format, padding);
+  }
+
 });
 
 
@@ -33,7 +45,7 @@ var padZeros = function(theNumber, padding){
 var generate = function(url, start, end, format, padding){
   $womb.empty();
   var htmlToAppend = '';
-  for (var i = parseInt(start); i <= parseInt(end); i++){
+  for (var i = start; i <= end; i++){
     var num = padZeros(i, padding)
       , uri = url + num + format
 
@@ -66,7 +78,8 @@ $womb.on({
       $this.offset({left:10});
       $this.css({'width':(wrapWidth-20)+'px'});
 
-    } else if ((imgOffsetLeft+imgWidth)>wrapWidth){
+    }
+    else if ((imgOffsetLeft+imgWidth)>wrapWidth){
       var goLeft = wrapWidth - imgWidth - 10;
       $this.offset({left:goLeft})
     }
