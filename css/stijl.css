@@ -90,9 +90,12 @@ a:visited img {
   display: block;
   max-width: 200px;
   max-height: 200px;
+  min-width: 106px;
+  min-height: 56px;
   border: 0;
   font-size: 3em;
-  color: #c8c8ff;
+  color: #aaf;
+  background-color: #f7f7f7;
 }
 #womb li img.imgHover {
   outline: none;
