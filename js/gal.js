@@ -33,7 +33,7 @@ var padZeros = function(theNumber, padding){
 var generate = function(url, start, end, format, padding){
   $womb.empty();
   var htmlToAppend = '';
-  for (var i = start; i <= end; i++){
+  for (var i = parseInt(start); i <= parseInt(end); i++){
     var num = padZeros(i, padding)
       , uri = url + num + format
 
