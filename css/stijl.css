@@ -26,6 +26,18 @@ body {
   margin:  0;
   list-style-type:  none;
 }
+#lHold {
+  width: 150px;
+  position: absolute;
+  right: -125px;
+  top: 19px;
+}
+#doer #linearize {
+  width: auto;
+}
+[for='linearize'] {
+  text-align: left;
+}
 #doer li {
   margin: 4px 0;
 }
@@ -83,8 +95,19 @@ a:visited img {
   width: 200px;
   position: relative;
 }
+#womb.linear li {
+  float: none;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 4em 0;
+  text-align: center;
+}
 #womb li a {
   display: inline-block;
+}
+#womb.linear li a {
+  max-width: 100%;
 }
 #womb li img {
   display: block;
@@ -96,6 +119,11 @@ a:visited img {
   font-size: 3em;
   color: #aaf;
   background-color: #f7f7f7;
+}
+#womb.linear li img {
+  display: block;
+  max-width: 100%;
+  max-height: 1000px;
 }
 #womb li img.imgHover {
   outline: none;

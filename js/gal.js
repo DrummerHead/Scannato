@@ -16,8 +16,10 @@ $doer.submit(function(e) {
     , end = parseInt($('#end').val())
     , format = $('#format').val()
     , padding = parseInt($('#padding').val())
+    , isChecked = $('#linearize:checked').length
     , eTotal = end - start
     , isOk = true;
+
 
   if (eTotal < 0){
     alert('Ending number must be higher than starting number, mate!');
@@ -26,8 +28,15 @@ $doer.submit(function(e) {
     isOk =  confirm('Your browser may get really slow if you render so many images. Continue anyway?');
   }
 
-  if (isOk){
+  if (isOk && !isChecked){
     generate(url, start, end, format, padding);
+    zoomity();
+    $womb.removeClass('linear');
+  }
+  else if (isOk && isChecked){
+    generate(url, start, end, format, padding);
+    $womb.addClass('linear');
+    $womb.off();
   }
 
 });
@@ -57,43 +66,45 @@ var generate = function(url, start, end, format, padding){
 }
 
 
-$womb.on({
+var zoomity = function(){
+  $womb.on({
 
-  mouseenter : function(){
-    var $this = $(this)
+    mouseenter : function(){
+      var $this = $(this)
 
-    $this.addClass('imgHover');
+      $this.addClass('imgHover');
 
-    var $wrap = $('#wrap')
-      , wrapWidth = $wrap.width()
-      , wrapHeight = $wrap.height()
-      , imgWidth = $this.width()
-      , imgHeight = $this.height()
-      , imgOffsetLeft = $this.offset().left
-      , imgOffsetTop = $this.offset().top
-      , imgDilate = imgOffsetTop + imgHeight
-      , wrapMinHeight = parseInt($wrap.css('min-height'))
+      var $wrap = $('#wrap')
+        , wrapWidth = $wrap.width()
+        , wrapHeight = $wrap.height()
+        , imgWidth = $this.width()
+        , imgHeight = $this.height()
+        , imgOffsetLeft = $this.offset().left
+        , imgOffsetTop = $this.offset().top
+        , imgDilate = imgOffsetTop + imgHeight
+        , wrapMinHeight = parseInt($wrap.css('min-height'))
 
-    if (imgWidth > wrapWidth){
-      $this.offset({left:10});
-      $this.css({'width':(wrapWidth-20)+'px'});
+      if (imgWidth > wrapWidth){
+        $this.offset({left:10});
+        $this.css({'width':(wrapWidth-20)+'px'});
 
+      }
+      else if ((imgOffsetLeft+imgWidth)>wrapWidth){
+        var goLeft = wrapWidth - imgWidth - 10;
+        $this.offset({left:goLeft})
+      }
+
+      if (imgDilate > wrapMinHeight){
+        $wrap.css({'min-height':imgDilate + 10});
+      }
+    },
+
+    mouseleave : function(){
+      $(this).removeClass('imgHover').removeAttr('style').removeAttr('left');
     }
-    else if ((imgOffsetLeft+imgWidth)>wrapWidth){
-      var goLeft = wrapWidth - imgWidth - 10;
-      $this.offset({left:goLeft})
-    }
 
-    if (imgDilate > wrapMinHeight){
-      $wrap.css({'min-height':imgDilate + 10});
-    }
-  },
-
-  mouseleave : function(){
-    $(this).removeClass('imgHover').removeAttr('style').removeAttr('left');
-  }
-
-}, 'img')
+  }, 'img')
+}
 
 
 
