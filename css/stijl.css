@@ -94,7 +94,7 @@ a:visited img {
   font-size: 3em;
   color: #c8c8ff;
 }
-.imgHover {
+#womb li img.imgHover {
   outline: none;
   width: auto;
   max-width: none;
