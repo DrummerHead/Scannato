@@ -27,7 +27,7 @@ body {
   list-style-type:  none;
 }
 #doer li {
-  margin: 4px 0 0 0;
+  margin: 4px 0;
 }
 label {
   display: inline-block;

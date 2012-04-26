@@ -8,7 +8,7 @@
 <meta name="description" content="Scannato is the name of this dynamic jQuery gallery. It works by generating links to images who&#8217;s name follow a numeric progression.">
 <meta name="author" content="DrummerHead">
 
-<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/stijl.css">
 <link rel="stylesheet" href="../css/promiscuous.css?1">
 <link rel='image_src' href='http://mcdlr.com/img/thumbs/gal.png'>
 
@@ -34,26 +34,31 @@
       <ol>
         <li>
           <label for="url">url:</label>
-          <input type="text" id="url" />
+          <input type="url" id="url">
         </li>
         <li>
           <label for="start">starting n&deg;:</label>
-          <input type="text" id="start" />
+          <input type="number" id="start">
         </li>
         <li>
           <label for="end">ending n&deg;:</label>
-          <input type="text" id="end" />
+          <input type="number" id="end">
         </li>
         <li>
           <label for="padding">padding zeroes:</label>
-          <input type="text" id="padding" />
+          <input type="number" id="padding">
         </li>
         <li>
-          <label for="format">format;:</label>
-          <input type="text" id="format" value=".jpg" />
+          <label for="format">format:</label>
+          <input type="text" id="format" list="extensions">
+          <datalist id="extensions">
+            <option value=".jpg">
+            <option value=".png">
+            <option value=".gif">
+          </datalist>
         </li>
       </ol>
-      <input type="submit" value="do it" id="doit" />
+      <input type="submit" value="do it" id="doit">
     </div>
   </form>
   <ul id="womb">
